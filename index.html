@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta http-equiv="Referrer-Policy" content="no-referrer"/>
+    <title>Now Level Up - Best UI UX Design Agency</title>
+    <link rel="stylesheet" href="css/leo9font.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="icon" type="image/svg+xml" href="now-level-up.svg"/>
+    <style>
+        .home-banner.home-banner-revamp {
+            min-height: calc(100vh - var(--headerHeight));
+            min-height: calc(100svh - var(--headerHeight));
+            height: calc(100vh - var(--headerHeight)) !important;
+            height: calc(100svh - var(--headerHeight)) !important;
+            margin-top: var(--headerHeight);
+            display: grid !important;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--myClrLight);
+            --hero-switch-track: #ffffff;
+            --hero-switch-core: #ededed;
+            --hero-switch-halo: #ffffff;
+        }
+
+        .home-banner.home-banner-revamp::before {
+            content: none;
+        }
+
+        .home-banner-revamp .lionAnimTriggerStart {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .home-banner-revamp .custom-logo-canvas,
+        .home-banner-revamp #particles-js {
+            display: none !important;
+        }
+
+        .home-banner-revamp .hero-shell {
+            width: min(1100px, 100%);
+            margin: 0 auto;
+            padding: clamp(18px, 4vw, 40px) clamp(24px, 5vw, 72px);
+            min-height: calc(100vh - var(--headerHeight));
+            min-height: calc(100svh - var(--headerHeight));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-banner-revamp .hero-eyebrow {
+            margin: 0;
+            color: var(--myClrDark);
+            opacity: 0.75;
+            font-family: "Afacad", sans-serif;
+            font-size: clamp(13px, 1.3vw, 16px);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .home-banner-revamp .hero-heading {
+            margin: 12px 0 4px;
+            color: var(--myClrDark);
+            font-size: clamp(34px, 5vw, 56px);
+            line-height: 1;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .home-banner-revamp h1.hero-heading {
+            position: relative;
+            z-index: 2;
+            opacity: 1;
+        }
+
+        .home-banner-revamp .hero-heading-text {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 4px;
+            text-transform: none;
+        }
+
+        .home-banner-revamp .hero-heading-text::after {
+            content: none;
+        }
+
+        .home-banner-revamp .hero-heading-arrow {
+            width: clamp(30px, 2.8vw, 40px);
+            height: clamp(30px, 2.8vw, 40px);
+            border-radius: 50%;
+            background: #fb5457;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(18px, 1.4vw, 22px);
+            line-height: 1;
+            font-weight: 700;
+            transform: translateY(2px);
+        }
+
+        .home-banner-revamp .hero-growth {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(8px, 1.6vw, 18px);
+            font-size: clamp(56px, 14vw, 156px);
+            line-height: 0.88;
+            color: var(--myClrDark);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+        }
+
+        .home-banner-revamp .hero-switch {
+            --hero-switch-w: 215px;
+            --hero-switch-h: 94px;
+            --hero-switch-border: 17.7346px;
+            --hero-knob-shell-size: 79.284px;
+            --hero-knob-core-size: 66.7654px;
+            --hero-switch-travel: calc(var(--hero-switch-w) - (var(--hero-switch-border) * 2) - var(--hero-knob-shell-size) + 2px);
+            width: var(--hero-switch-w);
+            height: var(--hero-switch-h);
+            border-radius: calc(var(--hero-switch-h) / 2);
+            border: var(--hero-switch-border) solid transparent;
+            background: linear-gradient(var(--hero-switch-track), var(--hero-switch-track)) padding-box,
+            linear-gradient(90deg, #ffdfe0 0%, #fb5457 100%) border-box;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+            transform: translateY(20px);
+            box-sizing: border-box;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            transition: background-color 0.25s ease, border-color 0.25s ease;
+            user-select: none;
+            -webkit-user-select: none;
+            outline: none;
+            touch-action: manipulation;
+        }
+
+        .home-banner-revamp .hero-switch:focus-visible {
+            outline: 2px solid #2f78ff;
+            outline-offset: 4px;
+        }
+
+        .home-banner-revamp .hero-switch-knob {
+            width: var(--hero-knob-shell-size);
+            height: var(--hero-knob-shell-size);
+            flex: 0 0 auto;
+            border-radius: 50%;
+            background: var(--hero-switch-halo);
+            box-shadow: 0 4.17284px 4.17284px rgba(0, 0, 0, 0.25);
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease;
+            transform: translateX(0);
+            will-change: transform;
+        }
+
+        .home-banner-revamp .hero-switch-knob-inner {
+            width: var(--hero-knob-core-size);
+            height: var(--hero-knob-core-size);
+            border-radius: 50%;
+            background: var(--hero-switch-core);
+            box-shadow: 0 4.17284px 4.17284px rgba(0, 0, 0, 0.25);
+        }
+
+        .home-banner-revamp .hero-switch[aria-checked='true'] .hero-switch-knob,
+        .home-banner-revamp .hero-switch.is-on .hero-switch-knob {
+            transform: translateX(var(--hero-switch-travel));
+        }
+
+        .home-banner-revamp .hero-business {
+            margin: 4px 0 18px;
+            color: var(--myClrDark);
+            font-size: clamp(24px, 4.5vw, 50px);
+            line-height: 1;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: clamp(8px, 1vw, 14px);
+        }
+
+        .home-banner-revamp .hero-business span {
+            text-transform: lowercase;
+        }
+
+        .home-banner-revamp .hero-business-logo {
+            position: relative;
+            width: clamp(24px, 3.6vw, 42px);
+            height: clamp(24px, 3.6vw, 42px);
+            display: inline-block;
+            flex: 0 0 auto;
+            transform: translateY(8px);
+        }
+
+        .home-banner-revamp .hero-business-logo-inner {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            animation: none !important;
+        }
+
+        .home-banner-revamp .hero-business-logo .hero-logo-ellipse {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 67%;
+            height: auto;
+        }
+
+        .home-banner-revamp .hero-business-logo .hero-logo-pointer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+            transform-origin: 60% 75%;
+            animation: heroPointerShrinkPulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes heroPointerShrinkPulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .home-banner-revamp .hero-copy {
+            margin: 4px auto 20px;
+            max-width: 760px;
+            color: var(--myClrDark);
+            opacity: 0.8;
+            font-family: "Afacad", sans-serif;
+            font-size: clamp(11px, 1.05vw, 14px);
+            line-height: 1.35;
+        }
+
+        .home-banner-revamp .hero-cta {
+            display: inline-block;
+            min-width: 170px;
+            margin-bottom: 0;
+            margin-top: 14px;
+            padding: 10px 22px;
+            border-radius: 999px;
+            border: 0;
+            background: #fb5457;
+            color: #ffffff;
+            font-family: "Afacad", sans-serif;
+            font-size: clamp(16px, 2vw, 27px);
+            font-weight: 600;
+            line-height: 1;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .home-banner-revamp .hero-cta:hover {
+            background: #000000 !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        html[data-theme='dark'] .home-banner.home-banner-revamp {
+            --hero-switch-track: #1b1b1b;
+            --hero-switch-core: #8b8b8b;
+            --hero-switch-halo: #2a2a2a;
+        }
+
+        html[data-theme='dark'] .home-banner.home-banner-revamp::before {
+            opacity: 0.32;
+        }
+
+        html[data-theme='dark'] .home-banner-revamp .hero-business-logo img {
+            filter: invert(1);
+        }
+
+        @media (max-width: 680px) {
+            .home-banner-revamp .hero-growth {
+                flex-wrap: wrap;
+                gap: 6px 10px;
+            }
+
+            .home-banner-revamp .hero-shell {
+                min-height: calc(100vh - var(--headerHeight));
+                min-height: calc(100svh - var(--headerHeight));
+                padding-top: clamp(24px, 8vh, 56px);
+                padding-bottom: clamp(24px, 8vh, 56px);
+            }
+
+            .home-banner-revamp .hero-heading {
+                gap: 10px;
+            }
+
+            .home-banner-revamp .hero-heading-text::after {
+                height: 2px;
+                bottom: 1px;
+            }
+
+            .home-banner-revamp .hero-switch {
+                --hero-switch-w: 150px;
+                --hero-switch-h: 65px;
+                --hero-switch-border: 12.3px;
+                --hero-knob-shell-size: 55px;
+                --hero-knob-core-size: 46.4px;
+                transform: translateY(12px);
+            }
+
+            .home-banner-revamp .hero-copy br {
+                display: none;
+            }
+
+            .home-banner-revamp .hero-business {
+                margin-top: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body class="homePage" style="opacity: 1">
+<!-- Header Starts -->
+<div class="homeHdr">
+    <div class="deskHeader"></div>
+</div>
+<!-- Header Ends -->
+<div class="contactBtn"></div>
+
+<!-- Mouse Scroll Starts -->
+<div class="scroll_Down_box">
+    <span>Scroll</span>
+    <div class="scroll_Down">
+        <img src="https://leo9studio.com/img/down-arrow-1.png" data-light="./img/down-arrow-1.png"
+             data-dark="./img/down-arrow-1-dark.png" loading="lazy" class="themeImg" alt="Scroll Down"/>
+    </div>
+</div>
+<!-- Mouse Scroll Ends -->
+
+<!-- Main Container Starts -->
+<div class="mainContainer">
+    <!-- Banner Starts -->
+    <div class="home-banner home-banner-revamp">
+        <div class="lionAnimTriggerStart"></div>
+        <div class="hero-shell">
+            <p class="hero-eyebrow">CONSULTING, PROGRAMMING, &amp; DESIGN</p>
+            <h1 class="hero-heading">
+                <span class="hero-heading-text">We Support</span>
+                <span class="hero-heading-arrow" aria-hidden="true">&#8599;</span>
+            </h1>
+            <div class="hero-growth" aria-label="growth">
+                <span>gr</span>
+                <button class="hero-switch hero-switch-toggle" type="button" role="switch" aria-label="Growth toggle" aria-checked="false">
+                    <span class="hero-switch-knob"><span class="hero-switch-knob-inner"></span></span>
+                </button>
+                <span>wth</span>
+            </div>
+            <p class="hero-business">
+                <span class="hero-business-logo" aria-hidden="true">
+                    <span class="hero-business-logo-inner">
+                        <img src="./img/hero-ellipse-193.svg" class="hero-logo-ellipse" alt=""/>
+                        <img src="./img/hero-component-5.svg" class="hero-logo-pointer" alt=""/>
+                    </span>
+                </span>
+                of your business
+            </p>
+            <p class="hero-copy">
+                We turn great ideas into working products.<br/>
+                We focus on good communication and understanding your business.
+            </p>
+            <button type="button" class="hero-cta quote-open-btn">Get a Quote</button>
+        </div>
+        <div id="lionCanvas" class="custom-logo-canvas" aria-hidden="true">
+            <div id="levelUpLottieCanvas"></div>
+        </div>
+        <div id="particles-js"></div>
+    </div>
+    <!-- Banner Ends -->
+
+    <!-- Who we are Starts -->
+    <div class="who-we-are-box grid">
+        <div class="lionAnimTriggerEnd"></div>
+        <div class="container">
+            <div class="row flex-c wwr-animation-ct">
+                <div class="w100 wwr-content stopSec">
+                    <div class="h-cont fadeInUp">
+                        <h2 class="hdg1" data-delay="0.2">We are a creative digital agency that blends strategy, design,
+                            and technology to deliver intelligent brand solutions.</h2>
+                    </div>
+                </div>
+                <div class="w100 wwr-animation">
+                    <div class="h-img whoWeAreImg">
+                        <div id="whoWeAreCanvas" class="lightAnim"></div>
+                        <div id="whoWeAreCanvasDark" class="darkAnim"></div>
+                        <div class="wwa wwa1"></div>
+                        <div class="wwa wwa2"></div>
+                        <div class="wwa wwa3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Who we are Ends -->
+
+    <!-- Service Section Starts -->
+    <div class="hs-box grid stopSec">
+        <div class="hs-service-trigger-1"></div>
+        <div class="container">
+            <div class="hs-service hs-service-1 stopSec">
+                <div class="hs-service-in">
+                    <h2>
+                        <span class="hsDotBox"><span class="hsdot hsdot-1"></span></span> <b>Design</b>
+                    </h2>
+                    <h2 class="hsTrigBtn">
+                        <span class="hsDotBox"><span class="hsdot hsdot-2"></span></span> <b>Technology</b>
+                    </h2>
+                    <h2 class="hsTrigBtn">
+                        <span class="hsDotBox"><span class="hsdot hsdot-3"></span></span> <b>Marketing</b>
+                    </h2>
+                    <span class="h-serv-ul-dummy"></span>
+                    <ul class="h-serv-ul-1">
+                        <li><a>UI Design</a></li>
+                        <li><a>UX Design</a></li>
+                        <li><a>UX Consultancy</a></li>
+                        <li><a>Design System</a></li>
+                        <li><a>Animation</a></li>
+                        <li><a>Illustrations</a></li>
+                    </ul>
+                    <div class="hs-img-mob-up">
+                        <div class="hs-img-mob hs-img-mob-1">
+                            <div class="hs-service-mob-canvas lightAnim" id="hs-service-1-mob-canvas"></div>
+                            <div class="hs-service-mob-canvas darkAnim" id="hs-service-1-mob-canvas-dark"></div>
+
+                            <div class="hs-line-mob"></div>
+                            <div class="hs-ellipse-mob"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hs-service hs-service-mob hs-service-2 stopSec">
+                <div class="hs-service-in">
+                    <h2>
+                        <span class="hsDotBox"><span class="hsdot hsdot-2"></span></span> <b>Technology</b>
+                    </h2>
+                    <ul class="h-serv-ul-2">
+                        <li><a>Web Development</a></li>
+                        <li><a>Softwares</a></li>
+                        <li><a>Mobile Apps</a></li>
+                        <li><a>Web Apps</a></li>
+                        <li><a>Front-end</a></li>
+                        <li><a>Back-end</a></li>
+                    </ul>
+                    <div class="hs-img-mob-up">
+                        <div class="hs-img-mob hs-img-mob-2">
+                            <div class="hs-service-mob-canvas lightAnim" id="hs-service-2-mob-canvas"></div>
+                            <div class="hs-service-mob-canvas-dark darkAnim" id="hs-service-2-mob-canvas-dark"></div>
+                            <div class="hs-line-mob"></div>
+                            <div class="hs-ellipse-mob"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hs-service hs-service-mob hs-service-3 stopSec">
+                <div class="workTriggerStart"></div>
+                <div class="hs-service-in">
+                    <h2>
+                        <span class="hsDotBox"><span class="hsdot hsdot-3 hsdot-3a"></span></span>
+                        <b>Marketing</b>
+                    </h2>
+                    <ul class="h-serv-ul-3">
+                        <li><a>Branding</a></li>
+                        <li><a>Brand Name</a></li>
+                        <li><a>Brand Guidelines</a></li>
+                        <li><a>Strategy</a></li>
+                        <li><a>Digital Marketing</a></li>
+                        <li><a>S.E.O.</a></li>
+                    </ul>
+                    <div class="hs-img-mob-up">
+                        <div class="hs-img-mob hs-img-mob-3">
+                            <div class="hs-service-mob-canvas lightAnim" id="hs-service-3-mob-canvas"></div>
+                            <div class="hs-service-mob-canvas-dark darkAnim" id="hs-service-3-mob-canvas-dark"></div>
+                            <div class="hs-line-mob"></div>
+                            <div class="hs-ellipse-mob"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hs-img-box-up">
+                <div class="hs-img-box">
+                    <div class="hs-line"></div>
+                    <div class="hs-ellipse"></div>
+                    <div class="hs-img hs-1-img">
+                        <div id="hs-service-1-canvas" class="lightAnim"></div>
+                        <div id="hs-service-1-canvas-dark" class="darkAnim"></div>
+                    </div>
+                    <div class="hs-img hs-2-img">
+                        <div id="hs-service-2-canvas" class="lightAnim"></div>
+                        <div id="hs-service-2-canvas-dark" class="darkAnim"></div>
+                    </div>
+                    <div class="hs-img hs-3-img">
+                        <div id="hs-service-3-canvas" class="lightAnim"></div>
+                        <div id="hs-service-3-canvas-dark" class="darkAnim"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Section Ends -->
+
+    <!-- Work Section Starts -->
+    <div class="h-work-hdn-box grid">
+        <div class="stopSec stopSecAbs stopSecWork"></div>
+        <div class="workTriggerEnd"></div>
+
+        <div class="container">
+            <div class="h-cont">
+                <h2 class="hdg1" data-delay="0.1"> As a forward-thinking digital agency, we collaborate with brands to design intuitive experiences,
+                    leverage technology, and drive meaningful business growth. </h2>
+            </div>
+        </div>
+    </div>
+    <div class="h-work-box section-padding home-page-work">
+        <div class="h-work-up">
+            <div class="swiper-container work-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="our-work/index.html" class="d-block">
+                            <div class="h-work h-work-1">
+                                <div class="h-work-pt h-work-pt-1"></div>
+                                <div class="h-work-pt-end h-work-pt-end-1"></div>
+                                <!-- Gangsta Start -->
+                                <div class="h-work-cont">
+                                    <h4>Gangsta Website</h4>
+                                    <p>Men's Clothing brand</p>
+                                    <ul>
+                                        <li>UI/UX</li>
+                                        <li>Website Development</li>
+                                    </ul>
+                                </div>
+                                <div class="hwork-img">
+                                    <img class="lazy" loading="lazy"
+                                         src="./img/work/gangsta-homescreen.png"
+                                         alt="Gangsta website design case study"/>
+                                </div>
+                                <!-- Gangsta End -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="our-work/index.html" class="d-block">
+                            <div class="h-work h-work-2">
+                                <div class="h-work-pt h-work-pt-2"></div>
+                                <div class="h-work-pt-end h-work-pt-end-2"></div>
+                                <!-- Lyychee START -->
+                                <div class="h-work-cont">
+                                    <h4>Lyychee Website</h4>
+                                    <p>Jewellery Brand</p>
+                                    <ul>
+                                        <li>UI/UX</li>
+                                        <li>Website Development</li>
+                                    </ul>
+                                </div>
+                                <div class="hwork-img">
+                                    <img class="lazy" loading="lazy"
+                                         src="./img/work/lyychee-homescreen.png"
+                                         alt="Lyychee website design case study"/>
+                                </div>
+                                <!-- Lyychee END -->
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="our-work/index.html" class="d-block">
+                            <div class="h-work h-work-3">
+                                <div class="h-work-pt h-work-pt-3"></div>
+                                <div class="h-work-pt-end h-work-pt-end-3"></div>
+                                <div class="h-work-cont">
+                                    <h4>Galacon Website</h4>
+                                    <p>Infrastructure development brand</p>
+                                    <ul>
+                                        <li>UI/UX</li>
+                                        <li>Website Development</li>
+                                    </ul>
+                                </div>
+                                <div class="hwork-img">
+                                    <img class="lazy" loading="lazy"
+                                         src="./img/work/galacon-homescreen.png"
+                                         alt="Galacon website design case study"/>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-work-btn"></div>
+    </div>
+    <!-- Work Section Ends -->
+
+    <!-- Our Expertise Starts -->
+    <div class="h-expertise-box grid">
+        <div class="stopSec stopSecAbs stopSecExpertise"></div>
+        <div class="container">
+            <div class="founderTriggerStart"></div>
+            <div class="founderTriggerEnd"></div>
+            <div class="h-cont fadeInUp" data-delay="0.1">
+                <h4>170+ projects delivered</h4>
+                <h5>and counting more..</h5>
+            </div>
+            <div class="h-img expertiseImg">
+                <div id="mapCanvas" class="lightAnim"></div>
+                <div id="mapCanvasDark" class="darkAnim"></div>
+                <div class="exp exp1"></div>
+                <div class="exp exp2"></div>
+                <div class="exp exp3"></div>
+            </div>
+            <ul>
+                <li><a>Foodtech</a></li>
+                <li><a>Fintech</a></li>
+                <li><a>Healthtech</a></li>
+                <li><a>Ai Bots</a></li>
+                <li><a>Traveltech</a></li>
+                <li><a>ECom</a></li>
+                <li><a>Realtech</a></li>
+                <li><a>Edtech</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Our Expertise Ends -->
+
+    <!-- Founder Starts -->
+    <div class="h-founder-box stopSec">
+        <div class="founderRefPt">
+            <div class="frp frp1"></div>
+            <div class="frp frp2"></div>
+            <div class="frp frp3"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="w100">
+                    <div class="meet-founder-box fadeIn" data-delay="0.1">
+                        <h6>
+                            Meet <br/>
+                            the <br/>
+                            Founder
+                        </h6>
+                        <div class="founder-pic-box">
+                            <div class="fndrRefPt">
+                                <div class="fndr fndr1"></div>
+                                <div class="fndr fndr2"></div>
+                                <div class="fndr fndr3"></div>
+                            </div>
+                            <h4>Sai Chaitanya</h4>
+                            <p>
+                                Founder at Now Level Up. <br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w100">
+                    <div class="founder-box fadeIn" data-delay="0.1">
+                        <div class="founder-in">
+                            <h6>What Clients say</h6>
+
+                            <div class="swiper-container founder-swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/kamlesh-dixit.jpg"
+                                                         loading="lazy" alt="Kamlesh Dixit - Deloitte"/>
+                                                </div>
+                                                <p>
+                                                    Kamlesh Dixit
+                                                    <span>Management Consultant - Deloitte</span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p> Now Level Up is a reliable, tech savvy and creative group to work
+                                                    with. Their creative insights, combined with superb technical
+                                                    capabilities make them a great team. I would recommend Now Level Up
+                                                    team without hesitation. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/amit-singh.jpg"
+                                                         loading="lazy" alt="Amit Singh - boodmo.com"/>
+                                                </div>
+                                                <p>
+                                                    Amit Singh
+                                                    <span>C.E.O. - Investica</span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p> Now Level Up is one of the few Design agencies that understand the
+                                                    financial services industry's inner workings. They're an incredible
+                                                    agency that “knows it”. The team Now Level Up is killing it and
+                                                    bringing UI/UX Designs to the forefront of a whole industry's
+                                                    digital transformation. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/client-rob.jpg"
+                                                         alt="Robb Fahrion - FVG" loading="lazy"/>
+                                                </div>
+                                                <p>
+                                                    Robb Fahrion
+                                                    <span>C.E.O. - FVG</span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p> Team Now Level Up works tirelessly to get deliverables to meet all
+                                                    client needs. Their organization should be trusted because they’ve
+                                                    continued to deliver quality over and over again. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/client-kapil.jpg"
+                                                         loading="lazy" alt="Kapil Pershad - Payzli"/>
+                                                </div>
+                                                <p>
+                                                    Kapil Pershad
+                                                    <span>C.T.O. - Payzli</span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p> I think the most impressive thing is their value proposition. The
+                                                    entire team is quite talented and are able to bring a very level of
+                                                    UX and UI design to the project at very fair pricing. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/client-tanay.jpg"
+                                                         loading="lazy" alt="Tanay Chotani - Travelxp.com"/>
+                                                </div>
+                                                <p>
+                                                    Tanay Chotani
+                                                    <span>C.E.O. - Travelxp.com </span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars-4.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p>Some of the biggest advantages Now Level Up has is that design is at
+                                                    the core of their thinking and company.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/ryan-denman.jpg"
+                                                         alt="Ryan Denman - Homsby" loading="lazy"/>
+                                                </div>
+                                                <p>
+                                                    Ryan Denman
+                                                    <span>Co-Founder - Homsby</span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p>
+                                                    They delivered to us exactly what we were looking for.
+                                                    <br/>
+                                                    Now Level Up was one of the few one stop shops that was able to
+                                                    provide us with an end to end solution and could deliver the results
+                                                    we were expecting.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/yevgen-sokolnikov.webp"
+                                                         loading="lazy" alt="Yevgen Sokolnikov - boodmo.com"/>
+                                                </div>
+                                                <p>
+                                                    Yevgen Sokolnikov
+                                                    <span>C.E.O. - boodmo.com</span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p>Thanks to Now Level Up's work, the website's long checkout time has
+                                                    been cut down to one minute helping the client increase its
+                                                    business.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="hf-container">
+                                            <div class="hf-box">
+                                                <div class="hf-img">
+                                                    <img src="https://leo9design.blr1.cdn.digitaloceanspaces.com/img/pradeep-kumaar.webp"
+                                                         loading="lazy" alt="Pradeep Kumaar - StanVentures"/>
+                                                </div>
+                                                <p>
+                                                    Pradeep Kumaar
+                                                    <span>C.E.O. - StanVentures</span>
+                                                </p>
+                                            </div>
+                                            <div class="hf-cont">
+                                                <div class="h-quote"><img src="https://leo9studio.com/img/quote.svg"
+                                                                          alt="Quote" loading="lazy"/></div>
+                                                <div class="h-stars"><img src="https://leo9studio.com/img/stars.svg"
+                                                                          alt="Starts" loading="lazy"/></div>
+                                                <p>
+                                                    The way they think from a user's point of view is impressive.
+                                                    <br/>
+                                                    Great designers and will take your project as their own company
+                                                    project to deliver best Designs from Day One!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="founder-pagination swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blogs Ends -->
+
+    <!-- FAQ Starts -->
+    <div class="h-faq-box grid section-padding faq">
+        <div class="container">
+            <div class="h-faq-title-row fadeInUp" data-delay="0.1">
+                <h2>FAQs</h2>
+                <span class="faq-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div class="faq-tabs-wrapper-wrap fadeInUp" data-delay="0.15">
+                <ul class="faq-tabs-wrapper">
+                    <li class="faq-tab active" data-target="faqTab1">UI/UX Design Company</li>
+                    <li class="faq-tab" data-target="faqTab2">UI/UX Design Process</li>
+                    <li class="faq-tab" data-target="faqTab3">UI/UX Design Service</li>
+                    <li class="faq-tab" data-target="faqTab4">UI/UX - Web &amp; Mobile</li>
+                </ul>
+            </div>
+
+            <div id="faqTab1" class="faq-tab-content active">
+                <div class="blog-cl-box">
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>What are your areas of focus as a leading UI/UX design company in India?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>We focus on end-to-end UI/UX design &mdash; from research and wireframes to high-fidelity interfaces and design systems &mdash; across web and mobile. With 170+ projects delivered, our work spans Fintech, Healthtech, Foodtech, Traveltech, Edtech, E-commerce, Real estate tech and AI-driven products.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>What separates Now Level Up from other top UI/UX design agencies?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>We combine design craft with behavior science and neuromarketing insight, so every screen is built to look good and perform. Add to that transparent communication, a dedicated in-house team, and a process built around measurable business outcomes, not just aesthetics.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Does Now Level Up have experience working with large corporate organisations in UX/UI design?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes. We've partnered with established enterprises and high-growth companies across fintech, e-commerce and B2B SaaS, helping them scale complex products while keeping the experience simple for their end users.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Does Now Level Up work with startups in UX/UI design?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Absolutely. We work with early-stage founders on MVP design and rapid prototyping, and with growth-stage startups on scaling their product design as their user base expands.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Why should we onboard Now Level Up? What's special about you?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>We bring design, technology and marketing together under one roof, backed by a proven track record of 170+ projects delivered. That means fewer handoffs, faster turnarounds, and a team that's invested in your product's success, not just the deliverables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="faqTab2" class="faq-tab-content">
+                <div class="blog-cl-box">
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>What does your UI/UX design process look like from start to finish?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>We start with discovery and research, move into wireframes and information architecture, then design high-fidelity UI and interactive prototypes, and close with usability testing and handoff-ready assets for development.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>How long does a typical UI/UX design project take?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Timelines vary with scope, but most projects run 4-10 weeks from kickoff to final handoff. We'll share a clear timeline once we understand your product and goals.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>How many rounds of revisions are included in your design process?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>We build structured feedback rounds into every phase of the project, so revisions happen early and often rather than at the very end, keeping the process collaborative and on schedule.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Do you involve clients throughout the design process?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, we treat you as part of the team. You'll review work at every major milestone, from wireframes to final UI, so there are no surprises at handoff.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>What tools do you use for UI/UX design and prototyping?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>We work with industry-standard tools like Figma for design and prototyping, along with research and collaboration tools suited to your project's needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="faqTab3" class="faq-tab-content">
+                <div class="blog-cl-box">
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>What UI/UX design services does Now Level Up offer?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Our services span UI design, UX design, UX research, UX writing, design systems, animation, iconography and illustrations &mdash; everything needed to take a product from concept to a polished, ready-to-build interface.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Do you offer UX research and usability testing?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, user research and usability testing are built into our process, helping us validate design decisions with real user feedback before development begins.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Can you help redesign an existing product, or only build from scratch?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Both. We regularly audit and redesign existing products to fix usability issues and modernise the experience, alongside designing new products from the ground up.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Do you provide design systems and style guides?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, we build scalable design systems and UI guidelines so your product stays visually consistent as your team and feature set grow.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Do your design services include front-end development?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, alongside design we offer UI and web development, so your interface can go from prototype to a fully built, functioning product with the same team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="faqTab4" class="faq-tab-content">
+                <div class="blog-cl-box">
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Do you design for both web and mobile platforms?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, we design websites, web apps and native mobile apps, tailoring each experience to how users actually interact with that platform.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>How is mobile app UI/UX design different from website design?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Mobile design accounts for smaller screens, touch interactions, and platform-specific navigation patterns, while web design has more room for complex layouts and needs to work across many screen sizes and browsers.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Do you design responsive websites that work across all devices?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, every website we design is responsive by default, so it adapts cleanly across desktop, tablet and mobile screens.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Can you design for both iOS and Android apps?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, we design for both platforms, adapting the interface to each one's conventions while keeping your brand experience consistent across devices.</p>
+                        </div>
+                    </div>
+                    <div class="blog-cl">
+                        <div class="bl-hdn">
+                            <div class="bl-icon"></div>
+                            <h3>Do you follow platform-specific design guidelines like Material Design and Apple HIG?</h3>
+                        </div>
+                        <div class="bl-cont">
+                            <p>Yes, we design within Google's Material Design and Apple's Human Interface Guidelines where relevant, so your app feels native and intuitive on each platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ Ends -->
+
+    <!-- Quote Starts -->
+    <div class="h-quote-box grid section-padding">
+        <div class="quoteMergeTrigger"></div>
+        <div class="container">
+            <div class="h-cont">
+                <h4>
+                    Let’s create a measurable <br/>
+                    impact on your business.
+                </h4>
+                <div class="relative">
+                    <button class="jumpingBtn quote-open-btn button-grd-line">
+                        <span>Design A Quote</span>
+                        <em>Design A Quote</em>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- For Mobile -->
+    <span class="mob-quote-btn-trigger"></span>
+    <!-- Quote Ends -->
+
+    <div class="dots dot1"></div>
+    <div class="dots dot2"></div>
+    <div class="dots dot3"></div>
+
+    <div class="dots dot4"></div>
+    <div class="dots dot5"></div>
+    <div class="dots dot6"></div>
+
+    <ul class="dotBox">
+        <li class="dotIn1"></li>
+        <li class="dotIn2"></li>
+        <li class="dotIn3"></li>
+        <li class="dotIn4"></li>
+        <li class="dotIn5"></li>
+        <li class="dotIn6"></li>
+        <li class="dotIn7"></li>
+        <li class="dotIn8"></li>
+        <li class="dotIn9"></li>
+        <li class="dotIn10"></li>
+    </ul>
+</div>
+<!-- Main Container Ends -->
+
+<button class="mob-quote-btn quote-open-btn">Design A Quote</button>
+
+<!-- Footer Starts -->
+<div class="seoContent"></div>
+<div class="deskFooter"></div>
+
+<!-- Footer Ends -->
+
+<!-- Quote Starts -->
+<div class="quote-pop-layer"></div>
+<div class="quotePopComponent"></div>
+<!-- Quote Ends -->
+
+<!-- <div class="themeModeLayer"></div> -->
+
+<!-- Dark Mode Starts -->
+<div class="dark-mode-layer"></div>
+<div class="darkModeComponent"></div>
+<!-- Dark Mode Ends -->
+
+<!-- starts -->
+
+
+<!-- end -->
+
+<!-- Standardized Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+<script src="js/link/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
+<script src="js/link/swiper.min.js"></script>
+<script src="js/link/lottie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script src="js/common.js"></script>
+<!-- End Standardized Scripts -->
+<script crossorigin="anonymous" referrerpolicy="no-referrer" rel="preload dns-prefetch" src="js/home.js"></script>
+<script src="js/faq-logic.js"></script>
+<script>
+    (function () {
+        function setupHeroSwitch(heroSwitch) {
+            if (!heroSwitch || heroSwitch.dataset.switchReady === "1") {
+                return;
+            }
+
+            heroSwitch.dataset.switchReady = "1";
+
+            function scrollToNextSection() {
+                var heroSection = heroSwitch.closest(".home-banner");
+                if (!heroSection) {
+                    return;
+                }
+
+                var nextSection = heroSection.nextElementSibling;
+                if (nextSection) {
+                    var topOffset = 100;
+                    var targetY = nextSection.getBoundingClientRect().top + window.pageYOffset - topOffset;
+                    window.scrollTo({
+                        top: Math.max(0, targetY),
+                        behavior: "smooth"
+                    });
+                }
+            }
+
+            function setSwitchState(isOn) {
+                heroSwitch.setAttribute("aria-checked", isOn ? "true" : "false");
+                heroSwitch.classList.toggle("is-on", isOn);
+            }
+
+            function toggleSwitchState() {
+                var isOn = heroSwitch.getAttribute("aria-checked") === "true" || heroSwitch.classList.contains("is-on");
+                setSwitchState(!isOn);
+            }
+
+            setSwitchState(heroSwitch.getAttribute("aria-checked") === "true");
+
+            heroSwitch.addEventListener("click", function (e) {
+                e.preventDefault();
+                toggleSwitchState();
+                scrollToNextSection();
+            });
+
+            heroSwitch.addEventListener("keydown", function (e) {
+                if (e.key === " " || e.key === "Enter") {
+                    e.preventDefault();
+                    toggleSwitchState();
+                    scrollToNextSection();
+                }
+            });
+        }
+
+        function initHeroSwitch() {
+            var heroSwitches = document.querySelectorAll(".hero-switch-toggle");
+            if (!heroSwitches.length) {
+                return;
+            }
+
+            heroSwitches.forEach(function (heroSwitch) {
+                setupHeroSwitch(heroSwitch);
+            });
+        }
+
+        function initAutoQuotePopup() {
+            if (document.body && document.body.dataset.autoQuoteReady === "1") {
+                return;
+            }
+            if (document.body) {
+                document.body.dataset.autoQuoteReady = "1";
+            }
+
+            var quoteOpened = false;
+            var maxAttempts = 20;
+            var attempts = 0;
+
+            document.addEventListener("click", function (e) {
+                if (e.target && e.target.closest(".quote-open-btn")) {
+                    quoteOpened = true;
+                }
+            }, true);
+
+            function openQuoteWhenReady() {
+                if (quoteOpened) {
+                    return;
+                }
+
+                var quotePopup = document.querySelector(".quote-pop-container");
+                var quoteTrigger = document.querySelector(".hero-cta.quote-open-btn") || document.querySelector(".quote-open-btn");
+
+                if (quotePopup && quoteTrigger && typeof quoteTrigger.click === "function") {
+                    quoteTrigger.click();
+                    quoteOpened = true;
+                    return;
+                }
+
+                attempts += 1;
+                if (attempts < maxAttempts) {
+                    window.setTimeout(openQuoteWhenReady, 500);
+                }
+            }
+
+            window.setTimeout(openQuoteWhenReady, 5000);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", function () {
+                initHeroSwitch();
+                initAutoQuotePopup();
+            });
+        } else {
+            initHeroSwitch();
+            initAutoQuotePopup();
+        }
+    })();
+</script>
+</body>
+
+</html>

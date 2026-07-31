@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="how4" transform="translate(-968 -737)">
+    <rect id="Rectangle_142" data-name="Rectangle 142" width="100" height="100" transform="translate(968 737)" fill="#fff"/>
+    <g id="test" transform="translate(137.991 74.461)">
+      <g id="Path_1434" data-name="Path 1434" transform="translate(830.009 662.539)">
+        <path id="Path_1525" data-name="Path 1525" d="M830.009,762.539h80.939v-100H830.009Zm79.852-1.088H831.1V663.627h23.516v14.433h31.732V663.627h23.516Zm-24.6-84.479H855.7V663.627h29.559Z" transform="translate(-830.009 -662.539)"/>
+      </g>
+      <g id="Path_1435" data-name="Path 1435" transform="translate(841.283 705.394)">
+        <path id="Path_1526" data-name="Path 1526" d="M842.241,710.124H869.09v-1.087H842.241Z" transform="translate(-842.241 -709.037)"/>
+      </g>
+      <g id="Path_1442" data-name="Path 1442" transform="translate(880.554 699.726)">
+        <path id="Path_1527" data-name="Path 1527" d="M884.85,709.27l6.406,6.407,11.731-11.731-1.061-1.06-10.67,10.668-5.346-5.345Z" transform="translate(-884.85 -702.887)"/>
+      </g>
+      <g id="Path_1437" data-name="Path 1437" transform="translate(842.138 736.732)">
+        <path id="Path_1528" data-name="Path 1528" d="M843.169,744.125h26.4v-1.087h-26.4Z" transform="translate(-843.169 -743.038)"/>
+      </g>
+      <g id="Union_4" data-name="Union 4" transform="translate(882.286 730.946)">
+        <path id="Path_1529" data-name="Path 1529" d="M887.707,750.074l-.977-.977,5.678-5.679h0l-5.678-5.679.977-.977,5.678,5.679,5.681-5.679.977.977-5.681,5.679,5.68,5.678-.977.977-5.68-5.678Z" transform="translate(-886.73 -736.761)"/>
+      </g>
+    </g>
+  </g>
+</svg>

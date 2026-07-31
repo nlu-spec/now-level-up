@@ -1,0 +1,53 @@
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: AdldxBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Default rule
+User-agent: *
+Allow: /
+
+# Disallowed sections
+Disallow: /cgi-bin/
+Disallow: /tag/
+Disallow: /comments/tag/
+Disallow: /category/*/tag/
+Disallow: /feed/
+Disallow: */feed/
+Disallow: /comments/feed/
+Disallow: /category/*/feed/
+Disallow: /thank-you.html
+Disallow: /404.html
+Disallow: /content.html
+Disallow: /refund-policy/content.html
+Disallow: /privacy-policy/content.html
+Disallow: /our-work/content.html
+Disallow: /marketing/content.html
+Disallow: /design/content.html
+Disallow: /terms-of-use/content.html
+
+# Sitemap
+Sitemap: https://leo9studio.com/sitemap.xml

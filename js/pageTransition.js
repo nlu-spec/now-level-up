@@ -1,0 +1,1 @@
+function startTransition() {TweenMax.to('body', 0.5, {opacity: 0,});}function endTransition() {TweenMax.to('body', 0.5, {opacity: 1,});}$(window).on('load', function () {endTransition();});
