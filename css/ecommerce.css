@@ -1933,6 +1933,60 @@ html[data-theme="dark"] .ecommerce-folder span {
 
 /* Mobile Breakpoint (<= 800px) */
 @media (max-width: 800px) {
+  /* =========================
+   MOBILE HERO FIX
+========================= */
+
+  @media (max-width: 800px) {
+    .ecommerce-hero {
+      min-height: auto;
+      height: auto;
+      padding: 0;
+      background-position: center top !important;
+      background-size: cover;
+    }
+
+    .ecommerce-hero-in {
+      width: 100%;
+      max-width: 100%;
+      min-height: 0;
+      height: auto;
+      padding: 30px 15px 45px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .ecommerce-hero .ecommerce-hero-in h1 {
+      width: 100%;
+      max-width: 340px;
+      margin: 14px auto 12px;
+      font-size: 34px;
+      line-height: 1.08;
+    }
+
+    .ecommerce-hero .ecommerce-hero-sub {
+      width: 100%;
+      max-width: 335px;
+      margin: 0 auto 20px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .ecommerce-hero .ecommerce-tag {
+      width: 100%;
+      max-width: 330px;
+      margin: 0 auto;
+    }
+
+    .ecommerce-hero .ecommerce-hero-btn {
+      margin: 10px auto 0;
+    }
+  }
   .ecommerce-hero {
     min-height: 0;
     padding-top: 110px;
